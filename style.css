@@ -388,8 +388,23 @@ footer button.show{
 }
 
 @media (max-width: 600px) {
+    body{
+        background: #ffffff;
+    }
+    .start_btn button{
+        font-size: 25px;
+        font-weight: 500;
+        color: #fff;
+        padding: 15px 30px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background: #007bff;
+        cursor: pointer;
+    }
+
     .info_box{
-        width: 411px;
+        width: 410px;
         height: 93vh;
     }
     .quiz_box{
@@ -418,6 +433,7 @@ footer button.show{
     }
     .quiz_box header{
         height: 60px;
+        margin-top: 10px;
     }
     .quiz_box header .title{
         font-size: 18px;
