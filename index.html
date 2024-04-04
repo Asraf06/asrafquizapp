@@ -1,13 +1,14 @@
-<!-- Created By CodingNepal - www.codingnepalweb.com  -->
+<!-- Created By Asraful -   -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Quiz App | Asraful</title>
+    <title>NPC Quiz Test</title>
     <link rel="stylesheet" href="style.css">
     <!-- FontAweome CDN Link for Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" type="image/jpg" href="NPC Logo.jpg">
 </head>
 <body>
     <!-- start Quiz button -->
@@ -32,7 +33,8 @@
     <!-- Quiz Box -->
     <div class="quiz_box">
         <header>
-            <div class="title">Asraful Quiz Application</div>
+            <img src="NPC Logo.jpg" alt="NPC LOGO" title="NPC LOGO" height="50px" width="50px" class="NPC_LOGO">
+            <div class="title">National Polytechnic College</div>
             <div class="timer">
                 <div class="time_left_txt">Time Left</div>
                 <div class="timer_sec">15</div>
@@ -41,17 +43,17 @@
         </header>
         <section>
             <div class="que_text">
-                <!-- Here I've inserted question from JavaScript -->
+                <!-- Here is inserted question from JavaScript -->
             </div>
             <div class="option_list">
-                <!-- Here I've inserted options from JavaScript -->
+                <!-- Here is inserted options from JavaScript -->
             </div>
         </section>
 
         <!-- footer of Quiz Box -->
         <footer>
             <div class="total_que">
-                <!-- Here I've inserted Question Count Number from JavaScript -->
+                <!-- Here is inserted Question Count Number from JavaScript -->
             </div>
             <button class="next_btn">Next Quiz</button>
         </footer>
@@ -64,12 +66,17 @@
         </div>
         <div class="complete_text">You've completed the Quiz!</div>
         <div class="score_text">
-            <!-- Here I've inserted Score Result from JavaScript -->
+            <!-- Here is inserted Score Result from JavaScript -->
         </div>
         <div class="buttons">
             <button class="restart"><a href="https://asraf06.netlify.app">Visit MY website</a></button>
             <button class="quit">Quit Quiz</button>
         </div>
+        <h1>Submit Your Info</h1>
+        <input type="text" name="your-name" placeholder="Name" id="name">
+        <input type="text" name="your-roll" placeholder="Roll" id="roll">
+		<input type="text" name="your-score" placeholder="You'er Total Score" id="score">
+        <input type="submit" value="Submit" id="submit">
     </div>
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
@@ -78,5 +85,42 @@
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="js/script.js"></script>
 
+    <!-- For database -->
+    <script type="module">
+            // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+  import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyD_y3oJRe2UiogR0btkBw7LBeGwQcwEJgU",
+    authDomain: "npc-quiz-test.firebaseapp.com",
+    projectId: "npc-quiz-test",
+    storageBucket: "npc-quiz-test.appspot.com",
+    messagingSenderId: "876308579258",
+    appId: "1:876308579258:web:391513c532a0dc6bd35383"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  // get ref to database services
+  const db = getDatabase(app);
+
+  document.getElementById("submit").addEventListener("click", function(e){
+    e.preventDefault();
+    set(ref(db, 'user/' + document.getElementById("name").value),
+    {
+
+        name: document.getElementById("name").value,
+        roll: document.getElementById("roll").value,
+        score: document.getElementById("score").value
+
+    })
+      alert("Score Submited Sucessfully.")
+  })
+    </script>
 </body>
 </html>

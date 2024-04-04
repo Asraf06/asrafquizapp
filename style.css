@@ -131,8 +131,9 @@ body{
 }
 
 .quiz_box header .title{
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 800;
+    margin-left: -20px;
 }
 
 .quiz_box header .timer{
@@ -387,10 +388,51 @@ footer button.show{
     background: #007bff;
 }
 
+input{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+}
+textarea{
+	width: 100%;
+	padding: 10px;
+}
+#submit{
+    font-size: 18px;
+    font-weight: 600;
+	border: none;
+	background-color: #007bff;
+	color: white;
+	width: 200px;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+#submit:hover{
+	background-color: #333333;
+}
+
 @media (max-width: 600px) {
     body{
         background: #ffffff;
     }
+
+    .NPC_LOGO {
+        height: 40px;
+        width: 60px;
+    }
+
+.info_box,
+.quiz_box,
+.result_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: none;
+}
+
     .start_btn button{
         font-size: 25px;
         font-weight: 500;
@@ -411,6 +453,13 @@ footer button.show{
         width: 411px;
         height: 93vh;
     }
+
+    .quiz_box header .title{
+        font-size: 10px;
+        font-weight: 600;
+        margin-left: 6px;
+    }
+
     .quiz_box header .timer{
         color: #004085;
         background: #cce5ff;
@@ -422,14 +471,14 @@ footer button.show{
     
     .quiz_box header .timer .time_left_txt{
         font-weight: 400;
-        font-size: 15px;
+        font-size: 13px;
         user-select: none;
     }
     .quiz_box header .timer .timer_sec{
         font-size: 15px;
         font-weight: 500;
         height: 30px;
-        width: 40px;
+        width: 35px;
     }
     .quiz_box header{
         height: 60px;
