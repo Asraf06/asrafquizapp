@@ -75,7 +75,14 @@
         <h1>Submit Your Info</h1>
         <input type="text" name="your-name" placeholder="Name" id="name">
         <input type="text" name="your-roll" placeholder="Roll" id="roll">
-		<input type="text" name="your-score" placeholder="You'er Total Score" id="score">
+        <select id="score">
+            <option value="score_1">I got 1 out of 6</option>
+            <option value="score_2">I got 2 out of 6</option>
+            <option value="score_3">I got 3 out of 6</option>
+            <option value="score_4">I got 4 out of 6</option>
+            <option value="score_5">I got 5 out of 6</option>
+            <option value="score_6">I got 6 out of 6</option>
+        </select>
         <input type="submit" value="Submit" id="submit">
     </div>
 
@@ -111,7 +118,7 @@
 
   document.getElementById("submit").addEventListener("click", function(e){
     e.preventDefault();
-    set(ref(db, 'users score/' + document.getElementById("name").value),
+    set(ref(db, 'user/' + document.getElementById("name").value),
     {
 
         name: document.getElementById("name").value,
