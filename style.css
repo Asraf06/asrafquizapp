@@ -325,7 +325,8 @@ footer button.show{
 .result_box .icon{
     font-size: 100px;
     color: #007bff;
-    margin-bottom: 10px;
+    margin-top: -30px;
+    margin-bottom: -15px;
 }
 
 .result_box .complete_text{
@@ -335,7 +336,7 @@ footer button.show{
 
 .result_box .score_text span{
     display: flex;
-    margin: 10px 0;
+    margin: -5px 0;
     font-size: 18px;
     font-weight: 500;
 }
@@ -417,6 +418,7 @@ textarea{
 	width: 200px;
 	margin-top: 10px;
 	border-radius: 5px;
+    cursor: pointer;
 }
 #submit:hover{
 	background-color: #333333;
