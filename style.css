@@ -395,6 +395,15 @@ input{
     border: 1px solid #007bff;
     border-radius: 10px;
 }
+
+select{
+    width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+}
+
 textarea{
 	width: 100%;
 	padding: 10px;
