@@ -111,7 +111,7 @@
 
   document.getElementById("submit").addEventListener("click", function(e){
     e.preventDefault();
-    set(ref(db, 'user/' + document.getElementById("name").value),
+    set(ref(db, 'users score/' + document.getElementById("name").value),
     {
 
         name: document.getElementById("name").value,
