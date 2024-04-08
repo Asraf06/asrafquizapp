@@ -57,13 +57,13 @@ let questions = [
   },
   {
     numb: 6,
-    question: "কম্পিউটার ডিপারমেন্ট এ সবচেয়ে কঠিন বিষয় কোনটি?",
-    answer: "বেসিক ইলেকট্রিসিটি",
+    question: "পরীক্ষায় কি করবা?",
+    answer: "Fail",
     options: [
-      "গণিত",
-      "বেসিক ইলেকট্রিসিটি",
-      "ফিজিক্স",
-      "ইংলিস"
+      "A) Fail",
+      "B) Option A",
+      "C) Option B",
+      "D) Option C"
     ]
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question
