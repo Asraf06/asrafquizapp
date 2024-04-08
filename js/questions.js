@@ -58,7 +58,7 @@ let questions = [
   {
     numb: 6,
     question: "পরীক্ষায় কি করবা?",
-    answer: "Fail",
+    answer: "A) Fail",
     options: [
       "A) Fail",
       "B) Option A",
